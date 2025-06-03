@@ -1,0 +1,47 @@
+.Patients_page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.actual_patient_row {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.image_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.actual_patient_text {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 150px;
+}
+
+.header {
+    font-size: 50px;
+    font-family: 'JomolhariRegular', serif;
+    color: #8C7F58;
+}
+
+.parragraph {
+    font-size: 20px;
+    font-family: 'Kodchasan', sans-serif;
+    color: #8F8888;
+}
