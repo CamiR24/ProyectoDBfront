@@ -34,6 +34,11 @@
     margin-left: 150px;
 }
 
+.actuales {
+    width: 310px;
+    height: 435px;
+}
+
 .header {
     font-size: 50px;
     font-family: 'JomolhariRegular', serif;
@@ -45,3 +50,112 @@
     font-family: 'Kodchasan', sans-serif;
     color: #8F8888;
 }
+
+.patient_card {
+    background-color: #FCF8EF;
+    border-radius: 20px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 5%;
+}
+
+.patient_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 75%;
+    margin-top: 30px;
+}
+
+.ancient_patient_row {
+    display: flex;
+    flex-direction: row;
+    background-color: #FCF8EF;
+    border-radius: 20px;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    height: 250px;
+}
+
+.container_text_ancient {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image_container_ancient {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.antiguos {
+    width: 200px;
+    height: auto;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+@media (max-width: 600px) {
+    .actual_patient_row,
+    .ancient_patient_row {
+      flex-direction: column;
+      width: 90%;
+      height: auto;
+      margin-top: 30px;
+    }
+  
+    .actual_patient_text {
+      width: 100%;
+      margin-left: 0;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .image_container,
+    .image_container_ancient {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+  
+    .actuales,
+    .antiguos {
+      width: 80%;
+      height: auto;
+    }
+
+    .antiguos {
+        border-radius: 20px;
+    }
+  
+    .header {
+      font-size: 30px;
+    }
+  
+    .parragraph {
+      font-size: 16px;
+    }
+  
+    .patient_grid {
+      grid-template-columns: 1fr; /* 1 card por fila en móviles */
+      width: 90%;
+    }
+  
+    .patient_card {
+      margin: 10px auto;
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .container_text_ancient {
+      width: 95%;
+    }
+  }

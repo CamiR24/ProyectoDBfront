@@ -38,3 +38,25 @@
     font-size: 20px;
     color: #8C7F58;
 }
+
+@media (max-width: 600px) {
+    .logo {
+      height: 100px;
+      width: auto; /* para mantener proporción */
+    }
+  
+    .main-nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .nav-item {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+  
+    .rectangle-navbar {
+      height: 40px;
+    }
+  }
