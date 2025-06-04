@@ -62,7 +62,7 @@ const Patients = () => {
           bloodtype: "A+",
           email: "jorge.salazar@example.com"
         }
-    ];
+    ]; 
 
     return (
         <div className="Patients-page">
