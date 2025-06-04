@@ -4,6 +4,7 @@ import 'react-calendar/dist/Calendar.css';
 
 // Recibe value y onChange desde el padre
 const CalendarWidget = ({ value, onChange }) => (
+    
   <div className='calendario-prueba'>
     <Calendar
       onChange={onChange}

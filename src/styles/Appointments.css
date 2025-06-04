@@ -1,3 +1,16 @@
+.Appointments_page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .calendario-prueba{
     width: 66%;
     display: flex;
@@ -61,4 +74,92 @@
     font-weight: 600;
     color: #8C7F58;
     background-color: #FCF8EF;
+  }
+
+  .header {
+    font-size: 50px;
+    font-family: 'JomolhariRegular', serif;
+    color: #8C7F58;
+    margin-top: -30px;
+  }
+
+  .widget-appointment {
+    display: flex;
+    flex-direction: row;
+    background-color: #FCF8EF;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    border-radius: 20px;
+    margin-bottom: 30px;
+  }
+
+  .text_appointment{
+    font-size: 20px;
+    font-family: 'Kodchasan', sans-serif;
+    margin-left: 10px;
+  }
+
+  .no-appointment {
+    display: flex;
+    flex-direction: row;
+    background-color: #FCF8EF;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family: 'Kodchasan', sans-serif;
+    padding: 1%;
+  }
+
+  @media (max-width: 600px) {
+    .calendario-prueba{
+        width: 130%;
+        margin-top: -40px;
+    }
+    
+    .custom-calendar {
+        font-size: 12px;
+        height: 400px;
+      }
+      
+      .react-calendar__tile {
+        font-size: 16px;
+      }
+      
+      .react-calendar__month-view__weekdays {
+        font-size: 12px;
+      }
+    
+      .react-calendar__month-view__days {
+        row-gap: 15px; /* Ajusta este valor según lo que desees */
+      }
+    
+      .react-calendar__navigation__label {
+        font-size: 18px;
+      }
+    
+      .widget-appointment {
+        width: 90%;
+        border-radius: 10px;
+        margin-bottom: 30px;
+      }
+
+      .header{
+        margin-top: -40px;
+      }
+    
+      .text_appointment{
+        font-size: 10px;
+        font-family: 'Kodchasan', sans-serif;
+        margin-left: 10px;
+      }
+    
+      .no-appointment {
+        width: 80%;
+        border-radius: 10px;
+        padding: 3%;
+      }
   }
