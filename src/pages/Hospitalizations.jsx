@@ -2,6 +2,8 @@ import React from 'react'
 import Navbar from '../components/Navigation/Navbar';
 import RoomGrid from '../components/Hospitalizations/RoomGrid';
 
+import '../styles/Hospitalizations.css'
+
 const rooms = [
     { id: 101, patientname: "Juan Pérez", diagnosis: "Hipertensión", treatment: "Medicamentos diarios" },
     { id: 102, patientname: "María López", diagnosis: "Diabetes tipo 2", treatment: "Insulina" },
@@ -23,18 +25,18 @@ const rooms = [
         <div className="Hospitalizations-page">
             <Navbar />
             <div className="second-slide">
+                <h1 className="header">Nivel 1</h1>
                 <div className='impar'>
-                    <h1 className="header">Nivel 1</h1>
                     <RoomGrid rooms={level1Rooms} />
                 </div>
 
+                <h1 className="header">Nivel 2</h1>
                 <div className='par'>
-                    <h1 className="header">Nivel 2</h1>
                     <RoomGrid rooms={level2Rooms} />
                 </div>
-
+                
+                <h1 className="header">Nivel 3</h1>
                 <div className='impar'>
-                    <h1 className="header">Nivel 3</h1>
                     <RoomGrid rooms={level3Rooms} />
                 </div>
             </div>
