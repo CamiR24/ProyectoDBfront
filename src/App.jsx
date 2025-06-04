@@ -16,7 +16,7 @@ export default function App() {
           {/* ---------- Públicas ---------- */}
           <Route path="/"      element={<Patients />} />
           <Route path="/especializations" element={<Especializations />} />
-          <Route path="/doctors" element={<Doctors />} />
+          <Route path="/especialidad/:name" element={<Doctors />} />
           <Route path="/labs" element={<Labs />} />
           <Route path="/results" element={<Results />} />
           <Route path="/appointments" element={<Appointments />} />

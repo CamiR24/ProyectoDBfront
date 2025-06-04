@@ -55,13 +55,17 @@
     margin-top: 30px;
 }
 
+.especialization-link {
+    text-decoration: none; /* Quita subrayado */
+    color: inherit; /* Hereda el color del texto del contenido interno */
+  }
+
 @media (max-width: 600px) {
     .button {
         width: 60%;
     }
     
     .especialization_card {
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -89,5 +93,11 @@
 
     .especialization-text{
         text-align: center;
+        margin-top: 50px;
     }
+
+    .header {
+        margin-left: -40px;
+    }
+
   }
