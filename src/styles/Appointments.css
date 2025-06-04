@@ -1,0 +1,64 @@
+.calendario-prueba{
+    width: 66%;
+    display: flex;
+    justify-content: center;
+}
+
+.custom-calendar {
+    margin: 80px;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 16px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 70%;
+    height: 550px;
+  }
+  
+  /* los días del mes */
+  .react-calendar__tile {
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 18px;
+    padding: 12px 0;
+    color: #8C7F58;
+    transition: background-color 0.3s;
+  }
+  
+  .react-calendar__tile--active {
+    background: #BF8059;
+    color: #FCF8EF;
+    border-radius: 8px;
+  }
+  
+  /* cambiar estilo del encabezado (mes, año) */
+  .react-calendar__navigation {
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #FCF8EF;
+  }
+  
+  /* días de la semana (lu, ma, etc.) */
+  .react-calendar__month-view__weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    row-gap: 50px;
+    font-family: 'Kodchasan', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #8C7F58;
+  }
+
+  .react-calendar__month-view__days {
+    display: grid !important;
+    grid-template-columns: repeat(7, 1fr);
+    row-gap: 35px; /* Ajusta este valor según lo que desees */
+  }
+
+  .react-calendar__navigation__label {
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #8C7F58;
+    background-color: #FCF8EF;
+  }
