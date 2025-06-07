@@ -1,0 +1,77 @@
+.Hospitalizations-page {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: 100%;
+}
+
+.second-slide {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: 100%;
+}
+
+.header {
+     margin-top: 30px;
+     font-size: 2rem;
+     color: #8C7F58;
+     font-family: 'JomolhariRegular', serif;
+}
+
+.result_grid {
+     display: grid;
+     grid-template-columns: repeat(1, 1fr);
+     width: 80%;
+     margin-top: 30px;
+}
+
+.best_patient_grid {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     width: 80%;
+     gap: 2%;
+     margin-top: 30px;
+}
+
+.result_card {
+     background-color: #FCF8EF;
+     border-radius: 20px;
+     padding-top: 1%;
+     padding-bottom: 1%;
+     padding-left: 5%;
+     padding-right: 5%;
+     margin-bottom: 2%;
+}
+
+.patient_card {
+     background-color: #fcf8ef;
+     border-radius: 20px;
+     padding: 1.5rem;
+     box-sizing: border-box;
+     width: 100%;
+}
+
+.result_horizontal_data {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 10px;
+     flex-wrap: wrap;
+}
+
+.parragraph {
+     font-size: 1rem;
+     color: #333;
+}
+
+@media (max-width: 768px) {
+     .result_horizontal_data {
+          flex-direction: column;
+          align-items: flex-start;
+     }
+
+     .result_grid {
+          width: 90%;
+     }
+}

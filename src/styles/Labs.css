@@ -1,0 +1,108 @@
+.Hospitalizations_page {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.second-slide {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+
+.lab_card {
+     background-color: #FCF8EF;
+     border-radius: 20px;
+     padding-top: 1%;
+     padding-bottom: 1%;
+     padding-left: 5%;
+     padding-right: 5%;
+     margin-bottom: 2%;
+}
+
+.lab_horizontal_data {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 10px;
+}
+
+.labs_grid {
+     display: grid;
+     grid-template-columns: repeat(1, 1fr);
+     width: 80%;
+     margin-top: 30px;
+}
+
+.recent_patient_grid {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     width: 75%;
+     gap: 2%;
+     margin-top: 30px;
+}
+
+.room_grid {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     width: 75%;
+     margin-top: 30px;
+}
+
+.patient_card {
+     background-color: #FCF8EF;
+     border-radius: 20px;
+     padding-top: 1%;
+     padding-bottom: 1%;
+     padding-left: 5%;
+     padding-right: 5%;
+     margin: 5%;
+}
+
+.card-title {
+     font-size: 50px;
+     font-family: 'JomolhariRegular', serif;
+     color: #8C7F58;
+     justify-self: center;
+}
+
+.room-text {
+     margin-top: -40px;
+}
+
+.header {
+     margin-top: 30px;
+}
+
+.par {
+     display: flex;
+     flex-direction: row;
+     background-color: #FCF8EF;
+     justify-content: center;
+     align-items: center;
+     border-top-left-radius: 20px;
+     border-bottom-left-radius: 20px;
+     margin-left: 520px;
+}
+
+.impar {
+     display: flex;
+     flex-direction: row;
+     background-color: #FCF8EF;
+     justify-content: center;
+     align-items: center;
+     border-top-right-radius: 20px;
+     border-bottom-right-radius: 20px;
+     margin-right: 520px;
+}
+
+@media (max-width: 600px) {
+     .par {
+          margin-left: 120px;
+     }
+
+     .impar {
+          margin-right: 120px;
+     }
+}
