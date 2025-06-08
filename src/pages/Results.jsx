@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Navbar from '../components/Navigation/Navbar';
 import ResultGrid from '../components/Results/ResultGrid';
 import BestPatientGrid from '../components/Results/BestPatientGrid'
+import AddResultForm from '../components/Results/AddResultForm';
 import '../styles/Results.css'
 
   const Result = () => {
+    const [showForm, setShowForm] = useState(false);
+  const [results, setResults] = useState([
+    // tu array de pacientes aquí...
+  ]);
+
      const resultsMock = [
           {
             id: 1,
@@ -56,7 +62,7 @@ import '../styles/Results.css'
             lastname: "Martínez",
             labname: "Micobacterias",
             lastVisit: "2025-01-15",
-            lastUpdate: "Excelente"
+            resultUpdate: "Excelente"
           },
           {
             id: 2,
@@ -64,7 +70,7 @@ import '../styles/Results.css'
             lastname: "Gómez",
             labname: "Inmunopatología",
             lastVisit: "2024-09-03",
-            lastUpdate: "Excelente",
+            resultUpdate: "Excelente",
           },
           {
             id: 3,
@@ -72,7 +78,7 @@ import '../styles/Results.css'
             lastname: "Pérez",
             labname: "Virología Molecular",
             lastVisit: "2024-02-14",
-            lastUpdate: "Excelente",
+            resultUpdate: "Excelente",
           },
           {
             id: 4,
@@ -80,7 +86,7 @@ import '../styles/Results.css'
             lastname: "Ruiz",
             labname: "Investigación en Cáncer",
             lastVisit: "2023-11-08",
-            lastUpdate: "Excelente",
+            resultUpdate: "Excelente",
           },
           {
             id: 5,
@@ -88,7 +94,7 @@ import '../styles/Results.css'
             lastname: "López",
             labname: "Olab Neurodegenerativas",
             lastVisit: "2023-06-25",
-            lastUpdate: "Excelente",
+            resultUpdate: "Excelente",
           },
           {
             id: 6,
@@ -96,15 +102,24 @@ import '../styles/Results.css'
             lastname: "Salazar",
             labname: "Laboratorio Médico Polanco",
             lastVisit: "2023-01-12",
-            lastUpdate: "Excelente",
+            resultUpdate: "Excelente",
           }
       ]; 
+
+      const handleAddPatient = (newPatient) => {
+        setResults([...results, { id: results.length + 1, ...newPatient }]);
+        setShowForm(false);
+      };
 
     return (
         <div className="Hospitalizations-page">
             <Navbar />
             <div className="second-slide">
                <h1 className="header">Resultados</h1>
+               <button className="add-result-button" onClick={() => setShowForm(!showForm)}>
+                {showForm ? 'Cancelar' : 'Añadir resultados'}
+              </button>
+              {showForm && <AddResultForm onSubmit={handleAddPatient} />}
                <ResultGrid patients={resultsMock}/>
                <h1 className="header">Pacinetes en mejor estado</h1>
                <BestPatientGrid patients={bestPatientMock}/>

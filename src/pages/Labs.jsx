@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Navbar from '../components/Navigation/Navbar';
 import PatientGrid from '../components/Laboratories/PatientGrid';
 import LabsGrid from '../components/Laboratories/LabsGrid'
+import AddLabsForm from '../components/Laboratories/AddLabsForm.jsx';
 import '../styles/Labs.css'
 
   const Labs = () => {
+    const [showForm, setShowForm] = useState(false);
+    const [labs, setLabs] = useState([
+  // Laboratorios
+    ]);
      const patientsMock = [
           {
             id: 1,
@@ -107,11 +112,20 @@ import '../styles/Labs.css'
           }
       ]; 
 
+      const handleAddLab = (newLab) => {
+        setLabs([...labs, { id: labs.length + 1, ...newLab }]);
+        setShowForm(false);
+      };
+
     return (
         <div className="Hospitalizations-page">
             <Navbar />
             <div className="second-slide">
                <h1 className="header">Laboratorios recientes</h1>
+                <button className="add-labs-button" onClick={() => setShowForm(!showForm)}>
+                  {showForm ? 'Cancelar' : 'Añadir laboratorios'}
+                </button>
+                {showForm && <AddLabsForm onSubmit={handleAddLab} />}
                <LabsGrid patients={LabsMock}/>
                <h1 className="header">Pacientes recientes</h1>
                <PatientGrid patients={patientsMock}/>

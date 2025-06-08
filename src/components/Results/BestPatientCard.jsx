@@ -5,7 +5,7 @@ const PatientCard = ({ patient }) => {
         <div className="patient_card">
             <p className="parragraph">{patient.name} {patient.lastname}</p>
             <p className="parragraph">Ultima visita: {patient.lastVisit}</p>
-            <p className="parragraph">Estado: {patient.lastUpdate}</p>
+            <p className="parragraph">Estado: {patient.resultUpdate}</p>
         </div>
     );
 }
