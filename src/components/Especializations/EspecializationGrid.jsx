@@ -18,20 +18,23 @@ const especializationImages = {
     "Psiquiatría": psiquiatria,
     "Dermatología": derm,
     "Geriatría": geriatria,
-  };
+};
 
-  export default function EspecializationGrid({ especializations }) {
+const EspecializationGrid = ({ especializations }) => {
     return (
-      <div className="especialization_grid">
-        {especializations.map((especialization) => (
-          <EspecializationCard 
-            key={especialization.id} 
-            especialization={{
-              ...especialization,
-              picture: especializationImages[especialization.name] || generalImg,
-            }}
-          />
-        ))}
-      </div>
+        <div className="especialization-grid">
+            {especializations.map((especialization) => (
+                <EspecializationCard
+                    key={especialization.id}
+                    especialization={{
+                        name: especialization.nombre,
+                        description: especialization.descripcion,
+                        picture: especializationImages[especialization.nombre] || cardio // imagen por defecto si no existe
+                    }}
+                />
+            ))}
+        </div>
     );
-  }
+};
+
+export default EspecializationGrid;

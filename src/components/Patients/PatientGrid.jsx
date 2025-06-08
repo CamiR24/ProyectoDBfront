@@ -1,6 +1,7 @@
 import PatientCard from "./PatientCard";
 
-export default function PatientGrid({ patients }) {
+const PatientGrid = ({ patients }) => {
+    console.log("PatientGrid recibe:", patients);
 
     return (
         <div className="patient_grid">
@@ -10,3 +11,5 @@ export default function PatientGrid({ patients }) {
         </div>
     );
 }
+
+export default PatientGrid;

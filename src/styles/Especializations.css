@@ -30,27 +30,54 @@
     justify-content: center;
     align-items: center;
     margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.especialization_card:hover {
+    transform: translateY(-5px);
 }
 
 .especialization-picture-container {
     display: flex;
     flex-direction: column;
     width: 40%;
+    height: 200px;
+    overflow: hidden;
 }
 
 .especialization-picture {
-    width: 220px;
-    height: 305px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .especialization-text{
     width: 60%;
     text-align: justify;
+    padding: 1rem;
+}
+
+.especialization-text h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.especialization-text p {
+    color: #666;
+    margin-top: 0.5rem;
 }
 
 .especialization_grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
     width: 85%;
     margin-top: 30px;
 }
